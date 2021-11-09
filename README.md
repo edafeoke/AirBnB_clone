@@ -123,7 +123,7 @@ NOTE: All tests should also pass in non-interactive mode: $ echo "python3 -m uni
 
 MANDATORY TASKS
 
-0. README, AUTHORS
+Task 0. README, AUTHORS
 
 Write a README.md containing:
 a. Description of the project
@@ -512,4 +512,5 @@ with patch('sys.stdout', new=StringIO()) as f:
 Otherwise, you will have to re-write the console by replacing precmd by default.
 
 ![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
->>>>>>> d0f23451feae893471fa8e02a852a222330311dd
+>>>>>>>
+
