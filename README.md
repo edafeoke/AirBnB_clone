@@ -15,7 +15,9 @@ Each task is linked and will help to:
 4. Create the first abstracted storage engine of the project: File storage.
 5. Create all unittests to validate all our classes and storage engine.
 
-First step: Write a command interpreter to manage your AirBnB objects. This command line interpreter would b limited to specific use-case which includes:
+#First step:
+
+Write a command interpreter to manage your AirBnB objects. This command line interpreter would b limited to specific use-case which includes:
 
 1. Creating a new object (ex: a new User or a new Place)
 2. Retrieving an object from a file, a database etc…
@@ -23,65 +25,43 @@ First step: Write a command interpreter to manage your AirBnB objects. This comm
 4. Updating attributes of an object
 5. Destroying an object
 
-REQUIREMENTS
+#REQUIREMENTS
 
-FOR PYTHON SCRIPTS:
+#For python scripts:
 
-Allowed editors: vi, vim, emacs
+1. Allowed editors: vi, vim, emacs
+2.All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+3. All your files should end with a new line
+4. The first line of all your files should be exactly #!/usr/bin/python3
+5. A README.md file, at the root of the folder of the project, is mandatory
+6. Your code should use the pycodestyle (version 2.7.*)
+7. All your files must be executable
+8. The length of your files will be tested using wc
+9. All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
+10. All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
+11. All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
-All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
+#Note: A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified).
 
-All your files should end with a new line
+#For Python Unit Tests:
 
-The first line of all your files should be exactly #!/usr/bin/python3
-
-A README.md file, at the root of the folder of the project, is mandatory
-
-Your code should use the pycodestyle (version 2.7.*)
-
-All your files must be executable
-
-The length of your files will be tested using wc
-
-All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-
-All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-
-All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-
-A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
-
-FOR PYTHON UNIT TESTS:
-
-Allowed editors: vi, vim, emacs
-
-All your files should end with a new line
-
-All your test files should be inside a folder tests
-
-You have to use the unittest module
-
-All your test files should be python files (extension: .py)
-
-All your test files and folders should start by test_
-
-Your file organization in the tests folder should be the same as your project
+1. Allowed editors: vi, vim, emacs
+2. All your files should end with a new line
+3. All your test files should be inside a folder tests
+4. You have to use the unittest module
+5. All your test files should be python files (extension: .py)
+6. All your test files and folders should start by test_
+7. Your file organization in the tests folder should be the same as your project.
 e.g., For models/base_model.py, unit tests must be in: tests/test_models/test_base_model.py
 e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 
-All your tests should be executed by using this command: python3 -m unittest discover tests
+8. All your tests should be executed by using this command: python3 -m unittest discover tests
+9. You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
+10. All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)').
+11. All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)').
+12. All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
-You can also test file by file by using this command: python3 -m unittest tests/test_models/test_base_model.py
-
-All your modules should have a documentation (python3 -c 'print(__import__("my_module").__doc__)')
-
-All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)')
-
-All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
-
-We strongly encourage you to work together on test cases, so that you don’t miss any edge case
-
-EXECUTION
+#EXECUTION
 
 Your shell should work like this in interactive mode:
 
@@ -135,22 +115,22 @@ You should have an AUTHORS file at the root of your repository, listing all indi
 
 You should use branches and pull requests on GitHub - it will help you as team to organize your work.
 
-Task 1. Be PEP8 compliant!
+#Task 1. Be PEP8 compliant!
 
 Write beautiful code that passes the PEP8 checks.
 
-Task 2. Unittests
+#Task 2. Unittests
 
 All your files, classes, functions must be tested with unit tests.
 Unit tests must also pass in non-interactive mode.
 
-Task 3. BaseModel
+#Task 3. BaseModel
 
 Write a class BaseModel that defines all common attributes/methods for other classes:
 
-models/base_model.py
+#models/base_model.py
 
-Public instance attributes:
+#Public instance attributes:
 id: string - assign with an uuid when an instance is created:
 
 you can use uuid.uuid4() to generate unique id but don’t forget to convert to a string
@@ -163,7 +143,7 @@ updated_at: datetime - assign with the current datetime when an instance is crea
 
 __str__: should print: [<class name>] (<self.id>) <self.__dict__>
 
-Public instance methods:
+#Public instance methods:
 
 save(self): updates the public instance attribute updated_at with the current datetime
 
@@ -181,7 +161,7 @@ you can use isoformat() of datetime object
 
 This method will be the first piece of the serialization/deserialization process: create a dictionary representation with “simple object type” of our BaseModel
 
-Task 4. Create BaseModel from dictionary
+#Task 4. Create BaseModel from dictionary
 
 Previously we created a method to generate a dictionary representation of an instance (method to_dict()).
 
@@ -205,7 +185,7 @@ Warning: 'created_at' and 'updated_at' are strings in this dictionary, but insid
 Otherwise:
 Create id and created_at as you did previously (new instance).
 
-Task 5. Store first object
+#Task 5. Store first object
 
 Now we can recreate a BaseModel from another one by using a dictionary representation:
 
@@ -217,13 +197,12 @@ Writing the dictionary representation to a file won’t be relevant:
 
 Python doesn’t know how to convert a string to a dictionary (easily)as it’s not human readable. Using this file with another program in Python or other language will be hard.So, you will convert the dictionary representation to a JSON string. JSON is a standard representation of a data structure. With this format, humans can read and all programming languages have a JSON reader and writer.
 
-Now the flow of serialization-deserialization will be:
+The flow of serialization-deserialization will be:
 
-<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
+#<class 'BaseModel'> -> to_dict() -> <class 'dict'> -> JSON dump -> <class 'str'> -> FILE -> <class 'str'> -> JSON load -> <class 'dict'> -> <class 'BaseModel'>
 
-Magic right?
 
-Terms:
+#Terms:
 
 Simple Python data structure: Dictionaries, arrays, number and string. ex: { '12': { 'numbers': [1, 2, 3], 'name': "John" } }
 
@@ -233,13 +212,13 @@ Write a class FileStorage that serializes instances to a JSON file and deseriali
 
 models/engine/file_storage.py
 
-Private class attributes:
+#Private class attributes:
 
 __file_path: string - path to the JSON file (ex: file.json)
 
 __objects: dictionary - empty but will store all objects by <class name>.id (ex: to store a BaseModel object with id=12121212, the key will be BaseModel.12121212)
 
-Public instance methods:
+#Public instance methods:
 
 all(self): returns the dictionary __objects
 
@@ -269,7 +248,7 @@ Call save(self) method of storage
 __init__(self, *args, **kwargs):
 If it’s a new instance (not from a dictionary representation), add a call to the method new(self) on storage
 
-Task 6. Console 0.0.1
+#Task 6. Console 0.0.1
 
 Write a program called console.py that contains the entry point of the command interpreter:
 
@@ -298,8 +277,7 @@ if __name__ == '__main__':
 
 This is to make your program executable except when imported. Please don’t add anything around - the Checker won’t like it otherwise.
 
-
-Task 7. Console 0.1
+#Task 7. Console 0.1
 
 Update your command interpreter (console.py) to have these commands:
 
@@ -369,8 +347,7 @@ Let’s add some rules:
 
 Note: No unittests needed
 
-
-Task 8. First User
+#Task 8. First User
 
 Write a class User that inherits from BaseModel:
 
@@ -452,8 +429,7 @@ user_id: string - empty string: it will be the User.id
 
 text: string - empty string
 
-
-Task 10. Console 1.0
+#Task 10. Console 1.0
 
 Update FileStorage to manage correctly serialization and deserialization of all our new classes: Place, State, City, Amenity and Review
 
@@ -463,44 +439,44 @@ Enjoy your first console!
 
 No unittests needed for the console
 
-ADVANCED TASKS.
+#ADVANCED TASKS.
 
-Task 11. All instances by class name
+#Task 11. All instances by class name
 
 Update your command interpreter (console.py) to retrieve all instances of a class by using: <class name>.all().
 
-Task 12. Count instances
+#Task 12. Count instances
 
 Update your command interpreter (console.py) to retrieve the number of instances of a class: <class name>.count().
 
-Task 13. Show
+#Task 13. Show
 
 Update your command interpreter (console.py) to retrieve an instance based on its ID: <class name>.show(<id>).
 
 Errors management must be the same as previously.
 No unittests needed
 
-Task 14. Destroy
+#Task 14. Destroy
 
 Update your command interpreter (console.py) to destroy an instance based on his ID: <class name>.destroy(<id>).
 
 Errors management must be the same as previously.
 No unittests needed
 
-Task 15. Update
+#Task 15. Update
 
 Update your command interpreter (console.py) to update an instance based on his ID: <class name>.update(<id>, <attribute name>, <attribute value>).
 
 Errors management must be the same as previously.
 No unittests needed
 
-Task 16. Update from dictionary
+#Task 16. Update from dictionary
 
 Update your command interpreter (console.py) to update an instance based on his ID with a dictionary: <class name>.update(<id>, <dictionary representation>).
 
 Errors management must be the same as previously.
 
-Task 17. Unittests for the Console!
+#Task 17. Unittests for the Console!
 
 Write all unittests for console.py, all features!
 
