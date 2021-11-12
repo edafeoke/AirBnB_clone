@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AirBnB_clone - The Console
 
 ![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
@@ -490,3 +491,8 @@ Otherwise, you will have to re-write the console by replacing precmd by default.
 ![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
 >>>>>>>
 
+=======
+# AirBnB_clone
+![hbnb logo](hbnb.png)
+
+>>>>>>> edafe
