@@ -12,7 +12,7 @@ class TestBaseModel(unittest.TestCase):
     '''
     Test BaseModel class
     '''
-    
+
     model = BaseModel()
     model.name = "Knightess"
 
