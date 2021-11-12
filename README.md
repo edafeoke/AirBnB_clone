@@ -2,10 +2,9 @@
 
 ![logo](hbnb.png)
 
-This ia team project on AirBnB clone - The console
+### A command interpreter to manipulate data without a visual interface, like in a Shell (perfect for development and debugging)
 
-It involves building a full web application: the AirBnB clone
-
+![project_image](project.png)
 # Installation
 
 	git clone https://github.com/edafeoke/AirBnB_clone.git
