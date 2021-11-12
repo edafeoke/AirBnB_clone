@@ -59,4 +59,3 @@ class FileStorage:
                 json_str = f.read()
                 dictionary = json.loads(json_str)
                 self.__objects = dictionary
-
