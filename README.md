@@ -1,10 +1,71 @@
 # AirBnB_clone - The Console
 
-![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
+![logo](hbnb.png)
 
-This ia team project on AirBnB clone - The console
+##### A command interpreter to manipulate data without a visual interface (perfect for development and debugging)
 
-It involves building a full web application: the AirBnB clone
+![project_image](project.png)
+# Installation
+
+	git clone https://github.com/edafeoke/AirBnB_clone.git
+	cd AirBnB_clone
+
+# Usage
+## Execution
+
+#### It works in interactive mode
+
+	./console.py
+	(hbnb) help
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
+	
+#### It also works in non-interactive mode
+
+	$ echo "help" | ./console.py
+	(hbnb)
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
+	(hbnb) 
+	$
+	$ cat test_help
+	help
+	$
+	$ cat test_help | ./console.py
+	(hbnb)
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
+	(hbnb) 
+	$
+
+## Console commands
+
+##### EOF
+###### Quits the console
+	(hbnb) EOF
+##### quit
+###### Quits the console
+	(hbnb) quit
+##### help
+###### Show help text
+	(hbnb) help
+	Documented commands (type help <topic>):
+        ========================================
+        EOF  help  quit create show destroy all update
+
+	(hbnb) help quit
+	(hbnb) Quits the console
+##### create
+###### Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id
+	(hbnb) create BaseModel
+	49faff9a-6318-451f-87b6-910505c55907
+	(hbnb)
 
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
@@ -453,7 +514,7 @@ Update your command interpreter (console.py) to retrieve the number of instances
 
 Update your command interpreter (console.py) to retrieve an instance based on its ID: <class name>.show(<id>).
 
-Errors management must be the same as previously.
+Errors management must be the same as previously.678
 No unittests needed
 
 #Task 14. Destroy
@@ -486,7 +547,4 @@ with patch('sys.stdout', new=StringIO()) as f:
     HBNBCommand().onecmd("help show")
     
 Otherwise, you will have to re-write the console by replacing precmd by default.
-
-![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
->>>>>>>
 
