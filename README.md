@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AirBnB_clone - The Console
 
 ![logo](hbnb.png)
@@ -6,6 +5,12 @@
 This ia team project on AirBnB clone - The console
 
 It involves building a full web application: the AirBnB clone
+
+# Installation
+
+	git clone https://github.com/edafeoke/AirBnB_clone.git
+
+	cd AirBnB_clone
 
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
