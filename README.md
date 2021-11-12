@@ -9,8 +9,12 @@ It involves building a full web application: the AirBnB clone
 # Installation
 
 	git clone https://github.com/edafeoke/AirBnB_clone.git
-
 	cd AirBnB_clone
+
+# Usage
+
+	./console
+	
 
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
