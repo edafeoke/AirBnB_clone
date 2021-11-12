@@ -122,44 +122,6 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 11. All your classes should have a documentation (python3 -c 'print(__import__("my_module").MyClass.__doc__)').
 12. All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 
-#EXECUTION
-
-Your shell should work like this in interactive mode:
-
-$ ./console.py
-(hbnb) help
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-
-(hbnb) 
-(hbnb) 
-(hbnb) quit
-$
-
-But also in non-interactive mode: (like the Shell project in C)
-
-$ echo "help" | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-$ cat test_help
-help
-$
-$ cat test_help | ./console.py
-(hbnb)
-
-Documented commands (type help <topic>):
-========================================
-EOF  help  quit
-(hbnb) 
-$
-
 NOTE: All tests should also pass in non-interactive mode: $ echo "python3 -m unittest discover tests" | bash
 
 MANDATORY TASKS
