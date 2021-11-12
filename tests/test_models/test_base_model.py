@@ -1,49 +1,51 @@
 #!/usr/bin/python3
 '''
-A unittest test module for the base_model module
+Module for base_model unittest
 '''
 
 import unittest
+from datetime import datetime
 from models.base_model import BaseModel
-import models
 
 
-class TestBaseModel(unittest.TastCase):
+class TestBaseModel(unittest.TestCase):
     '''
-    A test class that inherits unittest.TestCase
+    Test BaseModel class
     '''
-
-    def __init__(self):
-        self.model = BaseModel()
+    
+    model = BaseModel()
+    model.name = "Knightess"
 
     def setUp(self):
         '''
-        Set up test class
+        Setup class
         '''
-        self.model = BaseModel()
-        return super().setup()
+        model = BaseModel()
+        model.name = "Knightess"
+        model.number = 28
 
     def tearDown(self):
         '''
-        Tear down test class
+        Cleans up after test methods
         '''
-        self.model.dispose()
-        return super().tearDown()
+        pass
 
-    def test_init(self):
+    def test_has_attribute(self):
         '''
-        Test instantiation
+        Test if instance has all attributes
         '''
-        self.assertIsInstance(self.model, BaseModel)
+        model = BaseModel()
+        model.name = "Knightess"
+        model.number = 28
+        self.assertTrue(hasattr(model, "id"))
+        self.assertTrue(hasattr(model, "created_at"))
+        self.assertTrue(hasattr(model, "updated_at"))
+        self.assertTrue(hasattr(model, "name"))
+        self.assertTrue(hasattr(model, "number"))
 
-    def test_attributes(self):
+    def test_attribute_type(self):
         '''
-        Test for class and objects attribute
+        Test for all attribute types
         '''
-        self.model.my_number = 1
-        self.model.name = "Model 1"
-        self.assertEqual(self.model.name, "Model 1")
-        self.assertEqual(self.model.my_number, 1)
-
-if __name__ == '__main__':
-    unittest.main()
+        model = BaseModel()
+        self.assertIs(type(model.created_at), datetime)
