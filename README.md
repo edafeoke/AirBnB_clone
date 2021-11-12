@@ -2,7 +2,7 @@
 
 ![logo](hbnb.png)
 
-#### A command interpreter to manipulate data without a visual interface (perfect for development and debugging)
+##### A command interpreter to manipulate data without a visual interface (perfect for development and debugging)
 
 ![project_image](project.png)
 # Installation
@@ -61,6 +61,11 @@
 
 	(hbnb) help quit
 	(hbnb) Quits the console
+##### create
+###### Creates a new instance of BaseModel, saves it (to the JSON file) and prints the id
+	(hbnb) create BaseModel
+	49faff9a-6318-451f-87b6-910505c55907
+	(hbnb)
 
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
@@ -509,7 +514,7 @@ Update your command interpreter (console.py) to retrieve the number of instances
 
 Update your command interpreter (console.py) to retrieve an instance based on its ID: <class name>.show(<id>).
 
-Errors management must be the same as previously.
+Errors management must be the same as previously.678
 No unittests needed
 
 #Task 14. Destroy
@@ -543,11 +548,3 @@ with patch('sys.stdout', new=StringIO()) as f:
     
 Otherwise, you will have to re-write the console by replacing precmd by default.
 
-![logo](https://lh3.googleusercontent.com/uCwmVCFKdq93C5XiIgT1W02aGY3t9ovqISCbdl8FVhvEErKAhvKlbEjzfvQAuqYs_dXGAA=s170)
->>>>>>>
-
-=======
-# AirBnB_clone
-![hbnb logo](hbnb.png)
-
->>>>>>> edafe
