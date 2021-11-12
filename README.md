@@ -46,10 +46,21 @@
 
 ## Console commands
 
-Commands | Description
--------- | -----------
-EOF | Quits the console
---- | ----------------
+##### EOF
+###### Quits the console
+	(hbnb) EOF
+##### quit
+###### Quits the console
+	(hbnb) quit
+##### help
+###### Show help text
+	(hbnb) help
+	Documented commands (type help <topic>):
+        ========================================
+        EOF  help  quit create show destroy all update
+
+	(hbnb) help quit
+	(hbnb) Quits the console
 
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
