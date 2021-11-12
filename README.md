@@ -44,6 +44,13 @@
 	(hbnb) 
 	$
 
+## Console commands
+
+Commands | Description
+-------- | -----------
+EOF | Quits the console
+--- | ----------------
+
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
 
