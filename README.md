@@ -14,6 +14,8 @@ It involves building a full web application: the AirBnB clone
 # Usage
 ## Execution
 
+#### It works in interactive mode
+
 	./console.py
 	(hbnb) help
 
@@ -21,7 +23,28 @@ It involves building a full web application: the AirBnB clone
 	========================================
 	EOF  help  quit create show destroy all update
 	
-## Interact
+#### It also works in non-interactive mode
+
+	$ echo "help" | ./console.py
+	(hbnb)
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
+	(hbnb) 
+	$
+	$ cat test_help
+	help
+	$
+	$ cat test_help | ./console.py
+	(hbnb)
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
+	(hbnb) 
+	$
+
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
 
