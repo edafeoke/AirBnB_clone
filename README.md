@@ -12,10 +12,16 @@ It involves building a full web application: the AirBnB clone
 	cd AirBnB_clone
 
 # Usage
+## Execution
 
-	./console
+	./console.py
+	(hbnb) help
+
+	Documented commands (type help <topic>):
+	========================================
+	EOF  help  quit create show destroy all update
 	
-
+## Interact
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
 
