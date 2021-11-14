@@ -182,5 +182,6 @@ class HBNBCommand(cmd.Cmd):
         new_obj = Class(**all_objects[key])
         new_obj.save()
 
+
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
