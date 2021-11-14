@@ -17,7 +17,7 @@ class TestAmenity(unittest.TestCase):
         test form object
         '''
         obj = Amenity()
-        self.assertIsInstance(obj, Amenityi, "")
+        self.assertIsInstance(obj, Amenity, "")
 
 if __name__ == '__main__':
     unittest.main()
