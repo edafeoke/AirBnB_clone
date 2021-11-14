@@ -67,6 +67,7 @@
 	49faff9a-6318-451f-87b6-910505c55907
 	(hbnb)
 
+
 This project consists of eleven (11) mandatory tasks and seven (7) tasks.
 Each task is linked and will help to:
 
@@ -509,4 +510,5 @@ with patch('sys.stdout', new=StringIO()) as f:
     HBNBCommand().onecmd("help show")
     
 Otherwise, you will have to re-write the console by replacing precmd by default.
+=======
 

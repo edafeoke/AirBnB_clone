@@ -59,4 +59,9 @@ class FileStorage:
                 json_str = f.read()
                 dictionary = json.loads(json_str)
                 self.__objects = dictionary
-
+                '''
+                for k, v in dictionary.items():
+                    Class, id = k.split('.')
+                    key = "[{}] ({})".format(Class, id)
+                    self.__objects[key] = v
+                '''

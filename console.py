@@ -53,7 +53,7 @@ class HBNBCommand(cmd.Cmd):
         if not args:
             print('** class name missing **')
             return False
-        if not args in globals():
+        if args not in globals():
             print("** class doesn't exist **")
             return False
         Class = globals()[args]
@@ -91,7 +91,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, arg):
         '''
-        Deletes an instance based on the class name and id 
+        Deletes an instance based on the class name and id
         (save the change into the JSON file).
         Usage:
             $ destroy BaseModel 1234-1234-1234
@@ -179,11 +179,8 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
             return False
         all_objects[key][args[2]] = args[3]
-        
         new_obj = Class(**all_objects[key])
-        #setattr(new_obj, args[2], args[3])
         new_obj.save()
-        
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
