@@ -7,6 +7,7 @@ import unittest
 from models.engine.file_storage import FileStorage
 from models.base_model import BaseModel
 
+
 class TestClass(unittest.TestCase):
     """Test cases"""
 
@@ -23,6 +24,7 @@ class TestClass(unittest.TestCase):
     def test_is_instance(self):
         """isInstance"""
         self.assertIsInstance(self.storage, FileStorage)
+
 
 if __name__ == '__main__':
     unittest.main()

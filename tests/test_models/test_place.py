@@ -19,5 +19,6 @@ class TestPlace(unittest.TestCase):
         obj = Place()
         self.assertIsInstance(obj, Place, "")
 
+
 if __name__ == '__main__':
     unittest.main()
