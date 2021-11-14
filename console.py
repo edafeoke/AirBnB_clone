@@ -181,6 +181,12 @@ class HBNBCommand(cmd.Cmd):
         all_objects[key][args[2]] = args[3]
         new_obj = Class(**all_objects[key])
         new_obj.save()
+    def do_(self, args):
+        """
+        test
+        """
+
+        print('123456')
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

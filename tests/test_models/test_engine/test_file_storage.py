@@ -24,5 +24,11 @@ class TestClass(unittest.TestCase):
         """isInstance"""
         self.assertIsInstance(self.storage, FileStorage)
 
+    def test_all(self):
+        """
+        test all method
+        """
+        pass
+
 if __name__ == '__main__':
     unittest.main()
