@@ -45,5 +45,7 @@ class TestBaseModel(unittest.TastCase):
         self.assertEqual(self.model.name, "Model 1")
         self.assertEqual(self.model.my_number, 1)
 
+
 if __name__ == '__main__':
+
     unittest.main()
