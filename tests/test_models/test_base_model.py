@@ -53,6 +53,8 @@ class TestBaseModel(unittest.TestCase):
         self.assertIs(type(model.id), str)
 
 
+if __name__ == '__main__':
+
     def test_from_dict(self):
         '''
         Test whether BaseModel correctly create object from dictionary
