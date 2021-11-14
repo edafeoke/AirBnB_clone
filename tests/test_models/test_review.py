@@ -4,11 +4,12 @@ module containing User class tests
 '''
 
 import unittest
-from models.user import User
+from models.review import Review
 
 
 class TestUser(unittest.TestCase):
     '''
     Test class that tests the User class
     '''
-
+    obj = Review()
+    self.assertIsInstance(obj, Review)

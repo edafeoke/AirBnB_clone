@@ -4,11 +4,12 @@ module containing User class tests
 '''
 
 import unittest
-from models.user import User
+from models.city import City
 
 
 class TestUser(unittest.TestCase):
     '''
     Test class that tests the User class
     '''
-
+    obj = City()
+    self.assertIsInstance(obj, City)

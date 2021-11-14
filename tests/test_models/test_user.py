@@ -11,4 +11,5 @@ class TestUser(unittest.TestCase):
     '''
     Test class that tests the User class
     '''
-
+    obj = User()
+    self.assertIsInstance(obj, User)

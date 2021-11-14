@@ -73,3 +73,6 @@ class TestBaseModel(unittest.TestCase):
         self.assertIs(model.my_number, 89)
         self.assertEqual(model.created_at, cdate)
         self.assertEqual(model.updated_at, udate)
+
+if __name__ == "__main__":
+    unittest.main()
