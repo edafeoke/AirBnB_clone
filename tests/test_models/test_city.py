@@ -11,5 +11,13 @@ class TestUser(unittest.TestCase):
     '''
     Test class that tests the User class
     '''
-    obj = City()
-    self.assertIsInstance(obj, City)
+
+    def test_instance(self):
+        '''
+        Test iinstance of city class
+        '''
+        obj = City()
+        self.assertIsInstance(obj, City, "")
+
+if __name__ == '__main__':
+    unittest.main()

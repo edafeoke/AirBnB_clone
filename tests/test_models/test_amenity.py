@@ -7,9 +7,9 @@ import unittest
 from models.amenity import Amenity
 
 
-class TestUser(unittest.TestCase):
+class TestAmenity(unittest.TestCase):
     '''
-    Test class that tests the User class
+    Test class that tests the Amenity class
     '''
     
     def test_instance(self):
@@ -17,4 +17,7 @@ class TestUser(unittest.TestCase):
         test form object
         '''
         obj = Amenity()
-        self.assertIsInstance(obj, Amenity)
+        self.assertIsInstance(obj, Amenityi, "")
+
+if __name__ == '__main__':
+    unittest.main()

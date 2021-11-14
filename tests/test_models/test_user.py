@@ -11,5 +11,13 @@ class TestUser(unittest.TestCase):
     '''
     Test class that tests the User class
     '''
-    obj = User()
-    self.assertIsInstance(obj, User)
+
+    def test_instance(self):
+        '''
+        Test for instance of User class
+        '''
+        obj = User()
+        self.assertIsInstance(obj, User, "")
+
+if __name__ == '__main__':
+    unittest.maiin()
