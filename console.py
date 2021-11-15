@@ -196,6 +196,15 @@ class HBNBCommand(cmd.Cmd):
             else:
                 if command == 'all()':
                     self.do_all(classname)
+                    return
+                elif command == 'count()':
+                    counter = 0
+                    all_objs = models.storage.all()
+                    for k in all_objs.keys():
+                        key = k.split('.')
+                        if key[0] == classname:
+                            counter += 1
+                    print(counter)
                 return
         except:
             return cmd.Cmd.onecmd(self, line)
