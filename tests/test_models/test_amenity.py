@@ -11,12 +11,19 @@ class TestAmenity(unittest.TestCase):
     '''
     Test class that tests the Amenity class
     '''
-    def test_instance(self):
+    def setUp(self):
         '''
         test form object
         '''
         obj = Amenity()
+        obj.name = "water"
+
+    def test_attributes(self):
+        '''
+        test all attributes
+        '''
         self.assertIsInstance(obj, Amenity, "")
+        self.assertIs(obj.name, "water")
 
 
 if __name__ == '__main__':

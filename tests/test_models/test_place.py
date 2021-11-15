@@ -12,13 +12,19 @@ class TestPlace(unittest.TestCase):
     Test class that tests the Place class
     '''
 
-    def test_instance(self):
+    def setUp(self):
         '''
         test instance of class
         '''
         obj = Place()
-        self.assertIsInstance(obj, Place, "")
+        obj.name = "work"
 
+    def test_attributes(self):
+        '''
+        docs
+        '''
+        self.assertIsInstance(obj, Place, "")
+        self.assertIs(obj.name, "work")
 
 if __name__ == '__main__':
     unittest.main()

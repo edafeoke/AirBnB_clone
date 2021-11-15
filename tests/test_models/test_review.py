@@ -12,13 +12,18 @@ class TestReview(unittest.TestCase):
     Test class that tests the Review class
     '''
 
-    def test_instance(self):
+    def setUp(self):
         '''
         test instance
         '''
         obj = Review()
-        self.assertIsInstance(obj, Review, "")
+        obj.text = 'asdf'
 
+    def test_attr(self):
+        '''
+        docs
+        '''
+        self.assertIsInstance(obj, Review, "")
 
 if __name__ == '__main__':
     unittest.main()
