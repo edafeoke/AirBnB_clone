@@ -181,13 +181,24 @@ class HBNBCommand(cmd.Cmd):
         all_objects[key][args[2]] = args[3]
         new_obj = Class(**all_objects[key])
         new_obj.save()
-    def do_(self, args):
-        """
-        test
-        """
 
-        print('123456')
+    def onecmd(self, line):
+        """Interpret the argument as though it had been typed in response
+        to the prompt.
 
+        Checks whether this line is typed at the normal prompt or in
+        a breakpoint command list definition.
+        """
+        try:
+            classname, command = line.split('.')
+            if classname not in globals():
+                return cmd.Cmd.onecmd(self, line)
+            else:
+                if command == 'all()':
+                    self.do_all(classname)
+                return
+        except:
+            return cmd.Cmd.onecmd(self, line)
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
