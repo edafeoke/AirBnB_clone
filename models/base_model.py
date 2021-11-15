@@ -36,7 +36,7 @@ class BaseModel:
         string representation of the current object
         '''
         classname = self.__class__.__name__
-        return "[{}] ({}) {}".format(classname, self.id, self.__dict__)
+        return "[{}] ({}) {}".format(classname, self.id, self.to_dict())
 
     def save(self):
         '''
