@@ -205,6 +205,12 @@ class HBNBCommand(cmd.Cmd):
                         if key[0] == classname:
                             counter += 1
                     print(counter)
+                    return
+                elif command.startswith('show'):
+                    id = command[6:-2]
+                    print(id)
+                    c = "show {} {}".format(classname, id)
+                    return cmd.Cmd.onecmd(self, c)
                 return
         except:
             return cmd.Cmd.onecmd(self, line)
