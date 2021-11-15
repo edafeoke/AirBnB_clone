@@ -19,5 +19,6 @@ class TestReview(unittest.TestCase):
         obj = Review()
         self.assertIsInstance(obj, Review, "")
 
+
 if __name__ == '__main__':
     unittest.main()

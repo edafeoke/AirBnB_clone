@@ -13,9 +13,6 @@ class TestBaseModel(unittest.TestCase):
     Test BaseModel class
     '''
 
-    model = BaseModel()
-    model.name = "Knightess"
-
     def setUp(self):
         '''
         Setup class
@@ -52,6 +49,9 @@ class TestBaseModel(unittest.TestCase):
         self.assertIs(type(model.updated_at), datetime)
         self.assertIs(type(model.id), str)
 
+
+if __name__ == '__main__':
+
     def test_from_dict(self):
         '''
         Test whether BaseModel correctly create object from dictionary
@@ -73,6 +73,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIs(model.my_number, 89)
         self.assertEqual(model.created_at, cdate)
         self.assertEqual(model.updated_at, udate)
+
 
 if __name__ == "__main__":
     unittest.main()

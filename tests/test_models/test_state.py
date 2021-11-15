@@ -19,5 +19,6 @@ class TestState(unittest.TestCase):
         obj = State()
         self.assertIsInstance(obj, State, "")
 
+
 if __name__ == "__main__":
     unittest.main()
