@@ -23,7 +23,8 @@ class BaseModel:
                 if key == "__class__":
                     continue
                 elif key == 'created_at' or key == 'updated_at':
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    value = datetime.fromisoformat(value)
+                   # value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 setattr(self, key, value)
         else:
             self.id = str(uuid.uuid4())
