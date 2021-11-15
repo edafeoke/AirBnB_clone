@@ -50,7 +50,11 @@ class TestBaseModel(unittest.TestCase):
         self.assertIs(type(model.id), str)
 
 
-if __name__ == '__main__':
+    def test_save(self):
+        '''
+        test the save method of base_model
+        '''
+        assertIs(type(model.updated_at), datetime)
 
     def test_from_dict(self):
         '''
