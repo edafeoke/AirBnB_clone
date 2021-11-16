@@ -206,12 +206,18 @@ class HBNBCommand(cmd.Cmd):
                             counter += 1
                     print(counter)
                     return
-                elif command.startswith('show'):
-                    id = command[6:-2]
-                    print(id)
-                    c = "show {} {}".format(classname, id)
-                    return cmd.Cmd.onecmd(self, c)
-                return
+                    '''
+                    elif command.startswith('show'):
+                        id = command[6:-2]
+                        print(id)
+                        c = "show {} {}".format(classname, id)
+                        return cmd.Cmd.onecmd(self, c)
+                    '''
+                else:
+                    id = command[command.find('"')+1:command.find(')') - 1]
+                    c = command[0: command.find('(')]
+                    cm = "{} {} {}".format(c, classname, id)
+                    return cmd.Cmd.onecmd(self, cm)
         except:
             return cmd.Cmd.onecmd(self, line)
 
