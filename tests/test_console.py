@@ -14,8 +14,6 @@ class TestHBNBCommand(unittest.TestCase):
 
     def setUp(self):
         '''
-        setup method
+        setup test
         '''
-
-        with patch('sys.stdout', new=StringIO()) as f:
-            HBNBCommand().onecmd("help show")
+        pass
