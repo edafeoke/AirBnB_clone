@@ -47,3 +47,27 @@ button:hover {
 	padding: 0px 0px 15px 0px;
 	margin: 0px 30px;
 }
+
+.popover{
+	display: none;
+	box-sizing: border-box;
+	background-color: #fafafa;
+	width: 100%;
+	list-style-type: none;
+	border: 1px solid #ddd;
+	margin: 0px;
+	padding: 30px;
+	border-radius: 4px;
+}
+
+.popover li h2 {
+	font-size: 16px;
+}
+
+.popover li ul{
+	list-style-type: none;
+}
+
+.locations:hover > .popover, .amenities:hover > .popover {
+	display: block;
+}
