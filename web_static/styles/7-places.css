@@ -1,8 +1,8 @@
 .places {
-	width: 100%;
 	display: flex;
-	justify-items: center;
 	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
 	font-size: 30px;
 }
 
@@ -13,16 +13,17 @@
 }
 
 .places article {
+	flex:1;
+	flex-shrink: 0;
+	flex-grow: 0;
 	flex-basis: 390px;
 	margin: 20px;
 	padding: 20px;
 	border: 1px solid #ff5a5f;
 	border-radius: 4px;
-	flex-shrink: 0;
-	flex-grow: 0;
 }
 
 .places article h2 {
-	width: 100%;
 	font-size: 30px;
+	text-align: center;
 }
