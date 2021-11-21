@@ -1,22 +1,15 @@
 .places {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 	width: 100%;
-	font-size: 30px;
+	text-align: center;
 }
 
 .places h1 {
-	width: 100%;
-	text-align: left;
 	font-size: 30px;
 }
 
 .places article {
-	flex:1;
-	flex-shrink: 0;
-	flex-grow: 0;
-	flex-basis: 390px;
+	display: inline-block;
+	width: 390px;
 	margin: 20px;
 	padding: 20px;
 	border: 1px solid #ff5a5f;
@@ -26,19 +19,61 @@
 .places article h2 {
 	font-size: 30px;
 	text-align: center;
+	display: inline-block;
 }
 
-.price_by_night {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.places article .price_by_night {
+	display: inline-block;
+	float: right;
 	color: #ff5a5f;
 	border: 4px solid #ff5a5f;
 	border-radius: 50%;
 	min-width: 60px;
 	height: 60px;
 	font-size: 30px;
-	padding: 5px;
-	margin-left: auto;
-	margin-bottom:15px;
+}
+
+.price_by_night p {
+	margin: 15px auto;
+}
+
+.information {
+	width: 100%;
+	height: 80px;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	/* Vertical alignment is needed here */
+}
+
+.information div {
+	display: inline-block;
+	width: 100px;
+}
+
+.information div p {
+	margin: 0 auto;
+	display: inline-block;
+}
+
+.max_guest .icon {
+	margin: 0 auto;
+	background-image: url("../images/icon_group.png");
+	background-repeat: no-repeat;
+	padding: 23px;
+}
+
+.number_rooms .icon {
+	background-image: url("../images/icon_bed.png");
+	background-repeat: no-repeat;
+	padding: 23px;
+}
+
+.number_bathrooms .icon {
+	background-image: url("../images/icon_bath.png");
+	background-repeat: no-repeat;
+	padding: 23px;
+}
+
+.user, .description {
+	text-align: left;
 }
