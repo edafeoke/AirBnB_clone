@@ -145,10 +145,11 @@ ul {
 	padding: 10px 20px;
 }
 
-.reviews {
-	margin-top: 40px;
+.places article .reviews {
+/*	margin-top: 40px;
 	flex-direction: column;
-	width: 100%;
+	align-items: flex-start;
+	width: 100%;*/
 }
 
 .places article .reviews h2 {
