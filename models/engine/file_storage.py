@@ -38,8 +38,8 @@ class FileStorage:
         '''
         sets in __objects the obj with key <obj class name>.id
         '''
-        key = "{}.{}".format(type(obj).__name__, obj.id)
-        self.__objects[key] = obj.to_dict()
+        k = f"{obj.__class__.__name__}.{obj.id}"
+        self.__objects[k] = obj
 
     def save(self):
         '''
@@ -51,18 +51,15 @@ class FileStorage:
             f.write(json_str)
 
     def reload(self):
-        '''
-        deserializes the JSON file to __objects
-        '''
+        """deserializes the JSON file to __objects (only if the JSON file (__file_path) exists ;"""
+
         file_exists = exists(self.__file_path)
+
         if file_exists:
-            with open(self.__file_path, 'r') as f:
-                json_str = f.read()
-                dictionary = json.loads(json_str)
-                self.__objects = dictionary
-                '''
-                for k, v in dictionary.items():
-                    Class, id = k.split('.')
-                    key = "[{}] ({})".format(Class, id)
-                    self.__objects[key] = v
-                '''
+            with open(self.__file_path, 'r', encoding="utf-8") as f:
+                dict = json.loads(f.read())
+                for k, value in dict.items():
+                    cls = value["__class__"]
+                    obj = eval(cls)(**value)
+                    #self.__objects[k] = obj
+                    self.new(obj)

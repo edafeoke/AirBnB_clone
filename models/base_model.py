@@ -7,35 +7,41 @@ import models
 
 
 class BaseModel:
-	"""base model class"""
+    """base model class"""
 
-	def __init__(self, *args, **kwargs):
-		if kwargs:
-			for k, v in kwargs.items():
-				if k != '__class__':
-					val = None
-					if k == 'updated_at' or k == 'created_at':
-						val = datetime.fromisoformat(v)
-						setattr(self, k, val)
-					else:
-						setattr(self, k, v)
+    def __init__(self, *args, **kwargs):
+        if kwargs:
+            for k, v in kwargs.items():
+                if k != '__class__':
+                    val = None
+                    if k == 'updated_at' or k == 'created_at':
+                        val = datetime.fromisoformat(v)
+                        setattr(self, k, val)
+                    else:
+                        setattr(self, k, v)
 
-		else:
-			self.id = str(uuid4())
-			self.created_at = datetime.utcnow()
-			self.updated_at = datetime.utcnow()
-			models.storage.new(self)
+        else:
+            self.id = str(uuid4())
+            self.created_at = datetime.utcnow()
+            self.updated_at = datetime.utcnow()
+            models.storage.new(self)
 
-	def __str__(self):
-		return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+    def __str__(self):
+        '''Returns str representation of current obj'''
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
-	def save(self):
-		self.updated_at = datetime.utcnow()
-		models.storage.save()
+    def save(self):
+        '''returns a dictionary containing all
+        keys/values of __dict__ of the instance'''
+        self.updated_at = datetime.utcnow()
+        models.storage.save()
 
-	def to_dict(self):
-		obj = self.__dict__.copy()
-		obj['__class__'] = self.__class__.__name__
-		obj['updated_at'] = obj['updated_at'].isoformat()
-		obj['created_at'] = obj['created_at'].isoformat()
-		return obj
+    def to_dict(self):
+        '''returns a dictionary containing
+        all keys/values of __dict__ of the instance'''
+
+        obj = self.__dict__.copy()
+        obj['__class__'] = self.__class__.__name__
+        obj['updated_at'] = obj['updated_at'].isoformat()
+        obj['created_at'] = obj['created_at'].isoformat()
+        return obj
